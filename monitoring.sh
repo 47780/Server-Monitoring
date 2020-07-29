@@ -4,7 +4,7 @@
 EMAIL='name@email.com'
 SUB="$HOSTNAME-Alert"
 CPU=$(top -bn1 | grep load | awk '{printf "%.2f", $(NF-2)}')
-CPU_THRESHOLD=0.05
+CPU_THRESHOLD=60.0
 MEM=$(free -mt | awk '/Total/{print $4}')
 MEM_THRESHOLD=100
 D1_NAME="/"
